@@ -1,0 +1,18 @@
+[project]
+name = "ai-engineering-assistant"
+version = "0.1.0"
+description = "Nine-phase AI engineering assistant (LangGraph + OpenRouter)"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain>=1.3.14",
+    "langchain-community>=0.3.0",
+    "langchain-openai>=1.4.1",
+    "langchain-openrouter>=0.2.7",
+    "langchain-qdrant>=0.2.0",
+    "langchain-text-splitters>=0.3.0",
+    "langgraph>=1.2.10",
+    "python-dotenv>=1.2.2",
+    "qdrant-client>=1.12.0",
+]
