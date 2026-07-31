@@ -13,3 +13,4 @@ wheels/
 **/.qdrant/
 phases/09_evaluation/datasets/last_eval_results.json
 .env
+phases/02_rag/qdrant_data/
