@@ -76,8 +76,9 @@ def youtube_transcript(video_id: str) -> str:
     """Fetch YouTube transcript by video ID."""
     try:
         from youtube_transcript_api import YouTubeTranscriptApi
-        transcript = YouTubeTranscriptApi.get_transcript(video_id)
-        text = " ".join(chunk["text"] for chunk in transcript[:80])
+
+        transcript = YouTubeTranscriptApi().fetch(video_id)
+        text = " ".join(snippet.text for snippet in list(transcript)[:80])
         return text[:4000]
     except Exception as e:
         return f"YouTube transcript error: {str(e)}"
